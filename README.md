@@ -10,3 +10,7 @@ A proposição deste trabalho é implementar a coerção de tipos, também conhe
 ### Parte 2 do Projeto:
 - Implementação da coerção para soma, multiplicação e divisão entre um int e um float;
 - Implementação da coerção para divisão entre ints;
+
+### Equipe:
+- Lucas A. Lisboa
+- Augusto Terra
