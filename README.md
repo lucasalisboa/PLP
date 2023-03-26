@@ -15,3 +15,8 @@ A coerção é um mecanismo de conversão implícita de tipos implementadas pelo
 ### Equipe:
 - Lucas A. Lisboa
 - Augusto Terra
+
+### Links de Apoio:
+- https://www.cin.ufpe.br/~in1007/linguagens/Imperativa2/imperativa2.html
+- https://www.inf.ufpr.br/cursos/ci067/Docs/NotasAula/notas-21_Mais_sobre_tipos_convers.html
+- https://www.geeksforgeeks.org/type-conversion-c/
