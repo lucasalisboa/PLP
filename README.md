@@ -5,7 +5,7 @@ Repositório para disciplina de PLP. A proposição deste trabalho é implementa
 A coerção é um mecanismo de conversão implícita de tipos implementadas pelo compilador de uma linguagem. Neste tipo de conversão, ao contrário da implícita, em que o programador deve indicar qual variável será alterada, o compilador muda o tipo da variável menos abrangente para o tipo mais abrangente. Por exemplo, um tipo booleano só consegue representar dois valores (0 ou 1), enquanto o tipo inteiro consegue representar 65.535 valores (-32767 a 32767). 
 
 ### Implementações do Projeto:
-- Extensão da Gramática para incluir tipo float, operação de multiplicação e operação de divisão;
+- Extensão da Gramática para incluir tipo float e tipo char, operação de multiplicação e operação de divisão;
 - Implementação da coerção para soma, multiplicação e divisão entre um int e um float;
 - Implementação da coerção para divisão entre ints;
 - Implementação da coerção para soma e multiplicação entre boolean e int;
