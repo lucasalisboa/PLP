@@ -139,6 +139,8 @@ TOKEN : /* TOKENS DOS POSS�VEIS TIPOS */
   < INT : "int" >
 | < BOOLEAN  : "boolean" >
 | < STRING  : "string" >
+| < FLOAT : "float" > 
+| < CHAR : "char" >
 
 }
 
