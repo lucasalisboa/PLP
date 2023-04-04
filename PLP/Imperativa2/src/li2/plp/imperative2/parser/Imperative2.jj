@@ -410,6 +410,30 @@ Valor PValorInteiro() :
 	}
 }
 
+Valor PValorFloat() :
+{
+	Token token;
+}
+{
+	token = <FLOAT>
+	{
+		return new ValorFloat(Float.parseFloat(token.toString()));
+	}
+}
+
+Valor PValorChar() :
+{
+	Token token;
+}
+{
+	token = <CHAR>
+	{
+		String tokenStr = token.toString();
+		char[] thetoken = tokenStr.toCharArray();
+		return new ValorChar(thetoken[0]);
+	}
+}
+
 Valor PValorBooleano() :
 {
 }
@@ -440,6 +464,8 @@ Valor PValor() :
       	  retorno = PValorInteiro() 
 		| retorno = PValorBooleano()
 		| retorno = PValorString()
+		| retorno = PValorFloat()
+		| retorno = PValorChar()
     )
 	
 	{
@@ -756,7 +782,9 @@ Tipo PTipo():
 	(
 	<INT> {tipo = TipoPrimitivo.INTEIRO;} |
 	<BOOLEAN> {tipo = TipoPrimitivo.BOOLEANO;} |
-	<STRING> {tipo = TipoPrimitivo.STRING;}
+	<STRING> {tipo = TipoPrimitivo.STRING;} |
+	<FLOAT> {tipo = TipoPrimitivo.FLOAT;} |
+	<CHAR> {tipo = TipoPrimitivo.CHAR;}
 	)
 	{
 		return tipo;

@@ -1,6 +1,6 @@
 { 
    var a  =  1 ,
-   proc incA (int z)  {
+   proc incA (int z,float b, char c)  {
      a := a + z
    };
    call incA(3);
