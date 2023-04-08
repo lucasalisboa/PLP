@@ -61,6 +61,10 @@ ExpBinaria ::=  [Expressao "+" Expressao](PLP/Imperativa2/src/li2/plp/expression
 
 &emsp; &emsp; &emsp; &emsp;  &ensp;| [Expressao "++" Expressao](PLP/Imperativa2/src/li2/plp/expressions2/expression/ExpConcat.java)
 
+&emsp; &emsp; &emsp; &emsp;  &ensp;| [**Expressao "*" Expressao**](PLP/Imperativa2/src/li2/plp/expressions2/expression/ExpMult.java)
+
+&emsp; &emsp; &emsp; &emsp;  &ensp;| [**Expressao "/" Expressao**](PLP/Imperativa2/src/li2/plp/expressions2/expression/ExpDiv.java)
+
 ComandoDeclaracao :: = "{" [Declaracao](PLP/Imperativa2/src/li2/plp/imperative1/declaration/Declaracao.java) ";" Comando "}"
 
 Declaracao ::= [DeclaracaoVariavel](PLP/Imperativa2/src/li2/plp/imperative1/declaration/DeclaracaoVariavel.java)
