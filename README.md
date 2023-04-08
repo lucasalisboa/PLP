@@ -2,7 +2,7 @@
 Repositório para disciplina de PLP. A proposição deste trabalho é implementar a coerção de tipos, também conhecida como conversão implícita, da Linguagem C para a Linguagem Imperativa 2. 
 
 ## COERÇÃO DE TIPOS
-A coerção é um mecanismo de conversão implícita de tipos implementadas pelo compilador de uma linguagem. Neste tipo de conversão, ao contrário da implícita, em que o programador deve indicar qual variável será alterada, o compilador muda o tipo da variável menos abrangente para o tipo mais abrangente. Por exemplo, um tipo booleano só consegue representar dois valores (0 ou 1), enquanto o tipo inteiro consegue representar 65.535 valores (-32767 a 32767). 
+A coerção é um mecanismo de conversão implícita de tipos implementadas pelo compilador de uma linguagem. Neste tipo de conversão, ao contrário da explícita, em que o programador deve indicar qual variável será alterada, o compilador muda o tipo da variável menos abrangente para o tipo mais abrangente. Por exemplo, um tipo booleano só consegue representar dois valores (0 ou 1), enquanto o tipo inteiro consegue representar 65.535 valores (-32767 a 32767). 
 
 ### Implementações do Projeto:
 - Extensão da Gramática para incluir tipo float e tipo char, operação de multiplicação e operação de divisão;
