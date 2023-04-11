@@ -8,9 +8,11 @@ A coerção é um mecanismo de conversão implícita de tipos implementadas pelo
 - Extensão da Gramática para incluir tipo float e tipo char, operação de multiplicação e operação de divisão;
 - Implementação da coerção para soma, multiplicação e divisão entre um int e um float;
 - Implementação da coerção para divisão entre ints;
-- Implementação da coerção para soma e multiplicação entre boolean e int;
-- Implementação da coerção para soma entre char e int (conversão do char via ASCII);
+- Implementação da coerção para soma, multiplicação e divisão entre boolean e int;
+- Implementação da coerção para soma, multiplicação e divisão entre char e int (conversão do char via ASCII);
 - Implementação da coerção para soma entre char e string;
+- Implementação da Coerção na Chamada de Procedimento
+- Implementação da Coerção na Atribuição
 
 ## BNF
 <h3>Imperativa 2</h3>
