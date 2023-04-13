@@ -97,7 +97,6 @@ ListaExpressao ::= Expressao | Expressao, ListaExpressao
 
 ### Equipe:
 - Lucas A. Lisboa
-- Augusto Terra
 
 ### Links de Apoio:
 - https://www.cin.ufpe.br/~in1007/linguagens/Imperativa2/imperativa2.html
