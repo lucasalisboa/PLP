@@ -1,7 +1,7 @@
 { 
-   var a  =  1 ,
+   var a  =  1.1 ,
    proc incA (int z, float b,char c)  {
-     a := a * z
+     a := z * a
    };
    call incA(3,4.0,'c');
    call incA(5,2.5,'h');

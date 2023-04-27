@@ -36,6 +36,10 @@ public interface Tipo {
 	 */
 	public abstract boolean eString();
 
+	public abstract boolean eFloat();
+
+	public abstract boolean eChar();	
+
 	/**
 	 * Compara este tipo com o tipo dado.
 	 * Dois tipos s�o iguais se eles t�m o mesmo nome.

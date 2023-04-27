@@ -12,6 +12,10 @@ public class ValorFloat extends ValorConcreto<Float> {
 		super(valor);
 	}
 
+	public ValorFloat(Integer valor){
+		super((float) valor);
+	}
+
 	/**
 	 * Retorna os tipos possiveis desta expressao.
 	 * 
