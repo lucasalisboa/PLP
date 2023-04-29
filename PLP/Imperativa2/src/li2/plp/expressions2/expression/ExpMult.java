@@ -25,6 +25,7 @@ public class ExpMult extends ExpBinaria {
 	 * Retorna o valor da Expressao de Soma
 	 */
 	public Valor avaliar(AmbienteExecucao amb) throws VariavelNaoDeclaradaException, VariavelJaDeclaradaException {
+		
 		if(getEsq().avaliar(amb) instanceof ValorFloat && getDir().avaliar(amb) instanceof ValorInteiro){
 			return new ValorFloat(((ValorFloat) getEsq().avaliar(amb)).valor() *
 			((ValorInteiro) getDir().avaliar(amb)).valor());
