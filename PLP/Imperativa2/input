@@ -1,9 +1,9 @@
 { 
-   var a  =  300.0,
-   proc incA (int z, float b,char c)  {
+   var a  =  300,
+   proc incA (float z, float b,char c)  {
      a := a / z
    };
-   call incA(3,4.0,'c');
-   call incA(5,2.5,'h');
+   call incA(2.0,4.0,'c');
+   call incA(3.0,2.5,'h');
    write(a)
 }
