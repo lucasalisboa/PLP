@@ -31,7 +31,7 @@ public class ExpMult extends ExpBinaria {
 			((ValorInteiro) getDir().avaliar(amb)).valor());
 		}
 		if(getEsq().avaliar(amb) instanceof ValorInteiro && getDir().avaliar(amb) instanceof ValorInteiro){
-			return new ValorFloat(((ValorInteiro) getEsq().avaliar(amb)).valor() *
+			return new ValorInteiro(((ValorInteiro) getEsq().avaliar(amb)).valor() *
 			((ValorInteiro) getDir().avaliar(amb)).valor());
 		}
 		if(getEsq().avaliar(amb) instanceof ValorInteiro && getDir().avaliar(amb) instanceof ValorFloat){
@@ -66,7 +66,12 @@ public class ExpMult extends ExpBinaria {
 	 * @return os tipos possiveis desta expressao.
 	 */
 	public Tipo getTipo(AmbienteCompilacao ambiente) {
-		return TipoPrimitivo.FLOAT;
+		if(getEsq().getTipo(ambiente).eInteiro() && getDir().getTipo(ambiente).eInteiro()){
+			return TipoPrimitivo.INTEIRO;
+		}
+		else{
+			return TipoPrimitivo.FLOAT;
+		}
 	}
 	
 	@Override
