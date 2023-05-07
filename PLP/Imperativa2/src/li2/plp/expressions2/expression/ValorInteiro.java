@@ -16,6 +16,10 @@ public class ValorInteiro extends ValorConcreto<Integer> {
 		super(valor);
 	}
 
+	public ValorInteiro(Boolean valor){
+		super(BoolMap(valor));
+	}
+
 	/**
 	 * Retorna os tipos possiveis desta expressao.
 	 * 
@@ -23,6 +27,14 @@ public class ValorInteiro extends ValorConcreto<Integer> {
 	 *            o ambiente de compila��o.
 	 * @return os tipos possiveis desta expressao.
 	 */
+	private static Integer BoolMap(boolean valor){
+		if(valor){
+			return 1;
+		}
+		else{
+			return 0;
+		}
+	}
 	public Tipo getTipo(AmbienteCompilacao amb) {
 		return TipoPrimitivo.INTEIRO;
 	}
