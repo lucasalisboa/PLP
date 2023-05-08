@@ -36,6 +36,29 @@ public class ExpDiv  extends ExpBinaria {
 			return new ValorFloat(((ValorInteiro) getEsq().avaliar(amb)).valor() /
 			((ValorFloat) getDir().avaliar(amb)).valor());
 		}
+		if(getEsq().avaliar(amb) instanceof ValorInteiro && getDir().avaliar(amb) instanceof ValorBooleano){
+			ValorInteiro aux_1 = new ValorInteiro(((ValorBooleano) getDir().avaliar(amb)).valor());
+			ValorInteiro aux_2 = new ValorInteiro(((ValorInteiro) getEsq().avaliar(amb)).valor());
+			return new ValorInteiro(aux_2.valor() / aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorBooleano && getDir().avaliar(amb) instanceof ValorBooleano){
+			ValorInteiro aux_1 = new ValorInteiro(((ValorBooleano) getDir().avaliar(amb)).valor());
+			ValorInteiro aux_2 = new ValorInteiro(((ValorBooleano) getEsq().avaliar(amb)).valor());
+			return new ValorInteiro(aux_2.valor() / aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorBooleano && getDir().avaliar(amb) instanceof ValorInteiro){
+			ValorInteiro aux_1 = new ValorInteiro(((ValorInteiro) getDir().avaliar(amb)).valor());
+			ValorInteiro aux_2 = new ValorInteiro(((ValorBooleano) getEsq().avaliar(amb)).valor());
+			return new ValorFloat(aux_2.valor() / aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorFloat && getDir().avaliar(amb) instanceof ValorBooleano){
+			ValorInteiro aux_1 = new ValorInteiro(((ValorBooleano) getDir().avaliar(amb)).valor());
+			return new ValorFloat( ((ValorFloat) getEsq().avaliar(amb)).valor()/((ValorInteiro)aux_1).valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorBooleano && getDir().avaliar(amb) instanceof ValorFloat){
+			ValorInteiro aux_1 = new ValorInteiro(((ValorBooleano) getEsq().avaliar(amb)).valor());
+			return new ValorFloat(((ValorInteiro)aux_1).valor() / ((ValorFloat) getDir().avaliar(amb)).valor());
+		}
 		return new ValorFloat(
 			((ValorFloat) getEsq().avaliar(amb)).valor() /
 			((ValorFloat) getDir().avaliar(amb)).valor() );
@@ -54,8 +77,8 @@ public class ExpDiv  extends ExpBinaria {
 	 */
 	protected boolean checaTipoElementoTerminal(AmbienteCompilacao ambiente)
 			throws VariavelNaoDeclaradaException, VariavelJaDeclaradaException {
-				return ((getEsq().getTipo(ambiente).eFloat()||getEsq().getTipo(ambiente).eInteiro()) && (getDir().getTipo(ambiente).eFloat()||getDir().getTipo(ambiente).eInteiro()));
-	}
+				return ((getEsq().getTipo(ambiente).eFloat()||getEsq().getTipo(ambiente).eInteiro()||getEsq().getTipo(ambiente).eBooleano()) && (getDir().getTipo(ambiente).eFloat()||getDir().getTipo(ambiente).eInteiro()||getDir().getTipo(ambiente).eBooleano()));
+			}
 
 	/**
 	 * Retorna os tipos possiveis desta expressao.
@@ -64,6 +87,9 @@ public class ExpDiv  extends ExpBinaria {
 	 * @return os tipos possiveis desta expressao.
 	 */
 	public Tipo getTipo(AmbienteCompilacao ambiente) {
+		if((getEsq().getTipo(ambiente).eInteiro() && getDir().getTipo(ambiente).eBooleano())||(getEsq().getTipo(ambiente).eBooleano() && getDir().getTipo(ambiente).eBooleano())){
+			return TipoPrimitivo.INTEIRO;
+		}
 		return TipoPrimitivo.FLOAT;
 	}
 	

@@ -89,7 +89,7 @@ public class ExpMult extends ExpBinaria {
 	 * @return os tipos possiveis desta expressao.
 	 */
 	public Tipo getTipo(AmbienteCompilacao ambiente) {
-		if(getEsq().getTipo(ambiente).eInteiro() && getDir().getTipo(ambiente).eInteiro()){
+		if((getEsq().getTipo(ambiente).eInteiro()||getEsq().getTipo(ambiente).eBooleano()) && (getDir().getTipo(ambiente).eInteiro()||getDir().getTipo(ambiente).eBooleano())){
 			return TipoPrimitivo.INTEIRO;
 		}
 		else{
