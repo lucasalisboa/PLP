@@ -1,9 +1,8 @@
 { 
-   var a  =  true,
-   proc incA (int z)  {
-     a := a + z
+   var a  = true,
+   proc incA (char z)  {
+     a := a / z
    };
-   call incA(1);
-   call incA(2);
+   call incA('a');
    write(a)
 }

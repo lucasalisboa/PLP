@@ -20,6 +20,10 @@ public class ValorInteiro extends ValorConcreto<Integer> {
 		super(BoolMap(valor));
 	}
 
+	public ValorInteiro(Character valor){
+		super((int)valor);
+	}
+
 	/**
 	 * Retorna os tipos possiveis desta expressao.
 	 * 
