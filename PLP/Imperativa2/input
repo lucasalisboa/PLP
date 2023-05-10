@@ -1,8 +1,8 @@
 { 
-   var a  = true,
-   proc incA (char z)  {
-     a := a / z
+   var a  = 987.98,
+   proc incA (string z)  {
+     a := a ++ z
    };
-   call incA('a');
+   call incA("sasa");
    write(a)
 }

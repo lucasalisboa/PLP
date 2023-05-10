@@ -30,6 +30,118 @@ public class ExpConcat extends ExpBinaria{
 	 * Retorna o valor da Expressao de Concatenacao
 	 */
 	public Valor avaliar(AmbienteExecucao amb) throws VariavelNaoDeclaradaException, VariavelJaDeclaradaException {
+		if(getEsq().avaliar(amb) instanceof ValorInteiro && getDir().avaliar(amb) instanceof ValorBooleano){
+			ValorString aux_1 = new ValorString(((ValorBooleano) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorInteiro) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorBooleano && getDir().avaliar(amb) instanceof ValorBooleano){
+			ValorString aux_1 = new ValorString(((ValorBooleano) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorBooleano) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorInteiro && getDir().avaliar(amb) instanceof ValorInteiro){
+			ValorString aux_1 = new ValorString(((ValorInteiro) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorInteiro) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorBooleano && getDir().avaliar(amb) instanceof ValorInteiro){
+			ValorString aux_1 = new ValorString(((ValorInteiro) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorBooleano) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorFloat && getDir().avaliar(amb) instanceof ValorBooleano){
+			ValorString aux_1 = new ValorString(((ValorBooleano) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorFloat) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorFloat && getDir().avaliar(amb) instanceof ValorBooleano){
+			ValorString aux_1 = new ValorString(((ValorFloat) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorBooleano) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorFloat && getDir().avaliar(amb) instanceof ValorFloat){
+			ValorString aux_1 = new ValorString(((ValorFloat) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorFloat) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorFloat && getDir().avaliar(amb) instanceof ValorInteiro){
+			ValorString aux_1 = new ValorString(((ValorInteiro) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorFloat) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorInteiro && getDir().avaliar(amb) instanceof ValorFloat){
+			ValorString aux_1 = new ValorString(((ValorFloat) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorInteiro) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorFloat && getDir().avaliar(amb) instanceof ValorChar){
+			ValorString aux_1 = new ValorString(((ValorChar) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorFloat) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorChar && getDir().avaliar(amb) instanceof ValorChar){
+			ValorString aux_1 = new ValorString(((ValorChar) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorChar) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorChar && getDir().avaliar(amb) instanceof ValorFloat){
+			ValorString aux_1 = new ValorString(((ValorFloat) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorChar) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorChar && getDir().avaliar(amb) instanceof ValorInteiro){
+			ValorString aux_1 = new ValorString(((ValorInteiro) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorChar) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorInteiro && getDir().avaliar(amb) instanceof ValorChar){
+			ValorString aux_1 = new ValorString(((ValorChar) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorInteiro) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorChar && getDir().avaliar(amb) instanceof ValorBooleano){
+			ValorString aux_1 = new ValorString(((ValorBooleano) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorChar) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorBooleano && getDir().avaliar(amb) instanceof ValorChar){
+			ValorString aux_1 = new ValorString(((ValorChar) getDir().avaliar(amb)).valor());
+			ValorString aux_2 = new ValorString(((ValorBooleano) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorString && getDir().avaliar(amb) instanceof ValorChar){
+			ValorString aux_1 = new ValorString(((ValorChar) getDir().avaliar(amb)).valor());
+			return new ValorString(((ValorString) getEsq().avaliar(amb)).valor()+ aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorString && getDir().avaliar(amb) instanceof ValorBooleano){
+			ValorString aux_1 = new ValorString(((ValorBooleano) getDir().avaliar(amb)).valor());
+			return new ValorString(((ValorString) getEsq().avaliar(amb)).valor()+ aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorString && getDir().avaliar(amb) instanceof ValorFloat){
+			ValorString aux_1 = new ValorString(((ValorFloat) getDir().avaliar(amb)).valor());
+			return new ValorString(((ValorString) getEsq().avaliar(amb)).valor()+ aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorString && getDir().avaliar(amb) instanceof ValorInteiro){
+			ValorString aux_1 = new ValorString(((ValorInteiro) getDir().avaliar(amb)).valor());
+			return new ValorString(((ValorString) getEsq().avaliar(amb)).valor()+ aux_1.valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorBooleano && getDir().avaliar(amb) instanceof ValorString){
+			ValorString aux_2 = new ValorString(((ValorBooleano) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + ((ValorString) getDir().avaliar(amb)).valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorChar && getDir().avaliar(amb) instanceof ValorString){
+			ValorString aux_2 = new ValorString(((ValorChar) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + ((ValorString) getDir().avaliar(amb)).valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorInteiro && getDir().avaliar(amb) instanceof ValorString){
+			ValorString aux_2 = new ValorString(((ValorInteiro) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + ((ValorString) getDir().avaliar(amb)).valor());
+		}
+		if(getEsq().avaliar(amb) instanceof ValorFloat && getDir().avaliar(amb) instanceof ValorString){
+			ValorString aux_2 = new ValorString(((ValorFloat) getEsq().avaliar(amb)).valor());
+			return new ValorString(aux_2.valor() + ((ValorString) getDir().avaliar(amb)).valor());
+		}
 		return new ValorString(
 					( (ValorString) getEsq().avaliar(amb)).valor() +
 					( (ValorString) getDir().avaliar(amb)).valor()
@@ -49,7 +161,7 @@ public class ExpConcat extends ExpBinaria{
 	 */
 	protected boolean checaTipoElementoTerminal(AmbienteCompilacao ambiente)
 			throws VariavelNaoDeclaradaException, VariavelJaDeclaradaException {
-		return (getEsq().getTipo(ambiente).eString() && getDir().getTipo(ambiente).eString());
+		return ((getEsq().getTipo(ambiente).eString()||getEsq().getTipo(ambiente).eChar()||getEsq().getTipo(ambiente).eBooleano()||getEsq().getTipo(ambiente).eInteiro()||getEsq().getTipo(ambiente).eFloat()) && (getDir().getTipo(ambiente).eString()||getDir().getTipo(ambiente).eChar()||getDir().getTipo(ambiente).eBooleano()||getDir().getTipo(ambiente).eInteiro()||getDir().getTipo(ambiente).eFloat()));
 	}
 
 	/**

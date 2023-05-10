@@ -16,6 +16,22 @@ public class ValorString extends ValorConcreto<String> {
 		super(valor);
 	}
 
+	public ValorString(Integer valor){
+		super(Integer.toString(valor));
+	}
+
+	public ValorString(Float valor){
+		super(Float.toString(valor));
+	}
+
+	public ValorString(Boolean valor){
+		super(Boolean.toString(valor));
+	}
+
+	public ValorString(Character valor){
+		super(Character.toString(valor));
+	}
+
 	/**
 	 * Retorna os tipos possiveis desta expressao.
 	 * 
