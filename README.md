@@ -10,9 +10,8 @@ A coerção é um mecanismo de conversão implícita de tipos implementadas pelo
 - Implementação da coerção para divisão entre ints;
 - Implementação da coerção para soma, multiplicação e divisão entre boolean e int;
 - Implementação da coerção para soma, multiplicação e divisão entre char e int (conversão do char via ASCII);
-- Implementação da coerção para soma entre char e string;
-- Implementação da Coerção na Chamada de Procedimento
-- Implementação da Coerção na Atribuição
+- Implementação da coerção para contatenação (Todos os tipos são convertidos para string);
+- Implementação da Coerção na Atribuição.
 
 ## BNF
 <h3>Imperativa 2</h3>
