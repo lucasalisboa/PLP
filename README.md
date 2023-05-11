@@ -101,3 +101,4 @@ ListaExpressao ::= Expressao | Expressao, ListaExpressao
 - https://www.cin.ufpe.br/~in1007/linguagens/Imperativa2/imperativa2.html
 - https://www.inf.ufpr.br/cursos/ci067/Docs/NotasAula/notas-21_Mais_sobre_tipos_convers.html
 - https://www.geeksforgeeks.org/type-conversion-c/
+- https://github.com/filipanselmo11/Lisp/blob/master/Conceitos%20de%20Linguagem%20de%20Programa%C3%A7%C3%A3o%20(9a%20Edi%C3%A7%C3%A3o)%20-%20Robert%20W.%20Sebesta%20-%20trabalho.pdf
